@@ -3,7 +3,7 @@ import mysql.connector
 def get_all_universities():
     cnx = mysql.connector.connect(
         user='root',
-        password='Apb_0328',
+        password='root',
         host='localhost',
         database='academicworld'
     )
@@ -15,16 +15,16 @@ def get_all_universities():
     return results
 
 
-def get_faculty_by_keywords(keywords, university_filter=None):
+def get_faculty_by_keywords(keyword):
     cnx = mysql.connector.connect(
         user='root',
-        password='Apb_0328',
+        password='root',
         host='localhost',
         database='academicworld'
     )
     cursor = cnx.cursor()
 
-    placeholders = ','.join(['%s'] * len(keywords))
+    # placeholders = ','.join(['%s'] * len(keywords))
 
     base_query = f"""
         SELECT 
@@ -35,21 +35,21 @@ def get_faculty_by_keywords(keywords, university_filter=None):
         JOIN faculty_keyword fk ON f.id = fk.faculty_id
         JOIN keyword k ON k.id = fk.keyword_id
         JOIN university u ON f.university_id = u.id
-        WHERE k.name IN ({placeholders})
+        WHERE k.name = %s
     """
 
-    params = keywords
+    params = keyword
 
-    if university_filter:
-        base_query += " AND u.name = %s"
-        params.append(university_filter)
+    #if university_filter:
+     #   base_query += " AND u.name = %s"
+      #  params.append(university_filter)
 
     base_query += """
         GROUP BY f.id
         LIMIT 10;
     """
 
-    cursor.execute(base_query, params)
+    cursor.execute(base_query, (keyword,))
     results = cursor.fetchall()
     cursor.close()
     cnx.close()
@@ -59,7 +59,7 @@ def get_faculty_by_keywords(keywords, university_filter=None):
 def get_all_keywords():
     cnx = mysql.connector.connect(
         user='root',
-        password='Apb_0328',
+        password='root',
         host='localhost',
         database='academicworld'
     )
