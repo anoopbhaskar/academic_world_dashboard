@@ -1,6 +1,6 @@
 from neo4j import GraphDatabase
 
-driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "Apple123"))
+driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "Apb_0328"))
 
 def get_keyword_faculty_network(selected_keyword):
     selected_keyword = selected_keyword.lower() 
@@ -26,7 +26,7 @@ def get_keyword_faculty_network(selected_keyword):
 
 driver = GraphDatabase.driver(
     "bolt://localhost:7687", 
-    auth=("neo4j", "Apple123"), 
+    auth=("neo4j", "Apb_0328"), 
     encrypted=False
 )
 
