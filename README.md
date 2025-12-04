@@ -1,4 +1,4 @@
-# Anoop_Chinmayee
+# Anoop
 
 **Title**: Academic World Journey Explorer
 
