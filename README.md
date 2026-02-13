@@ -16,6 +16,3 @@
 
 **Database Techniques**: We have used the database technique Constraint. A constraint in the user_profile collection is implemented to allow email ids only with a certain format. We have used the database technique Indexing. An index is created in keywords table SQL since our dashboard widgets are around fetching data based on keywords. Adding the index will make the fetch faster. We have used the database technique View. While fetching the university ranking based on the keyword it will use the view to fetch the count.
 
-**Extra-Credit Capabilities**: We did not make an attempt to add any extra credit capabilities. 
-
-**Contributions**: Anoop and Chinmayee both contributed a good amount of hours into this project. Anoop worked more on the functionality of the dashboard with MySQL and Neo4j, while Chinmayee did most of the work ensuring that MongoDB is functioning as it should. Both team members put equal effort and time into this project. Altogether, both team members were involved in all aspects of the dashboard, from creativity and ideas to helping with debugging, creating visualizations, and making sure that all requirements were met. 
