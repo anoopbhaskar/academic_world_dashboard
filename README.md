@@ -4,7 +4,7 @@
 
 **Purpose**: We built an interactive dashboard which integrates MySQL, MongoDB, and Neo4j to help users explore research areas, identify leading universities and faculty members, and plan an academic path for themselves. The target users are students or prospective graduate applicants who want to narrow down their list of research interests and potential programs that they want to attend. The main objectives of our application are discovery and evaluation, meaning users can view trends of relevant research areas and scour the top universities and research professors of a specific interest they have. 
 
-**Demo**: https://mediaspace.illinois.edu/edit/1_8tf346a9 
+**Demo**: (https://youtu.be/itSJCxGWPvw)
 
 **Installation**: For installation, you should first begin by cloning the repository and ensuring you have the relevant python dependencies installed and ready to go. You would then have to make sure that MySQL, MongoDB, and Neo4j servers are running locally to access the databases. Then, confirm that they are connected to the python scripts (mysql_utils.py, mongodb_utis.py, neo4j_utils.py) with your user login and password information. 
 
